@@ -1,32 +1,32 @@
 # Sampling Effect on Performance Prediction of Configurable Systems: A Case Study (Artifact)
 
-In this repository, we provides general instructions of how to reproduce the results of the paper "Sampling Effect on Performance Prediction of Configurable Systems: A Case Study" and reuse the datasets.
+In this repository, we provides general instructions of how to reproduce the results of the paper "Sampling Effect on Performance Prediction of Configurable Systems: A Case Study" and reuse our datasets of measurements.
 
-# Overview
+## Overview
 
 ![Overview](https://github.com/jualvespereira/ICPE2020/blob/master/overview.png)
 
 In the Figure above, we give an overview of our study.
-We replicate a recent study [recent study](https://github.com/se-passau/Distance-Based_Data) through an in-depth analysis of x264, a popular and configurable video encoder.
+We replicate a [recent study](https://github.com/se-passau/Distance-Based_Data) through an in-depth analysis of x264, a popular and configurable video encoder.
 We systematically measure 1,152 configurations of x264 with 17 different input videos and two quantitative properties (encoding time and encoding size).
-Our goal is to understand whether there is a dominant sampling strategy (e.g., random, coverage-based, distance-based) over the very same subject system (x264), i.e., whatever the workload and targeted performance properties. 
+Our goal is to understand whether there is a dominant sampling strategy (*e.g.*, random, coverage-based, distance-based) over the very same subject system (x264), *i.e.*, whatever the workload and targeted performance properties. 
 
-# Data
+## Data
 
 The data is published in this [repository](https://github.com/jualvespereira/ICPE2020).
-Overall, in this repository, we provide two directories: "Distance-Based_Data_Time" and "Distance-Based_Data_Size".
-Each directory contains the data related to time and size prediction, respectively.
-They provide two main directories: "MeasuredPerformanceValues" and "PerformancePredictions"
+Overall, in this repository, we provide two directories: [Distance-Based_Data_Time](Distance-Based_Data_Time/) and [Distance-Based_Data_Size](Distance-Based_Data_Size/).
+Each directory contains the data related to *time* and *size* prediction, respectively.
+They provide two main directories: [MeasuredPerformanceValues](Distance-Based_Data_Time/SupplementaryWebsite/MeasuredPerformanceValues/) and [PerformancePredictions](Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/)
 
 ### Measured Performance Values
 
-This directory contains the feature model and measurements of all seventeen analysed input videos, namely x264_0, x264_1, x264_2, ..., x264_16, and a file containing the description of the input video we used to measure all valid configurations. To perform additional experiments, the user can add the corresponding files to a new case study (more information about the format of these files can be found at [SPLConqueror](github.com/se-passau/SPLConqueror).
+This directory contains the feature model and measurements of all 17 analysed input videos, namely <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_1" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_2" border="0"/>, ..., <img src="http://latex.codecogs.com/gif.latex?x264_{16}" border="0"/>, and a file containing the description of the input video we used to measure all valid configurations. To perform additional experiments, the user can add the corresponding files to a new case study (more information about the format of these files can be found at [SPLConqueror](github.com/se-passau/SPLConqueror).
 
 ### Performance Predictions
 
 This directory contains a set of prediction log files with the experiment results (i.e., error rate) of the different sampling approaches and input videos. Each sampling error rate is computed 100 times using different random seeds for each input video.
 
-# Step-by-Step Instructions
+## Step-by-Step Instructions
 
 Overall, our experiments consists of 3 main steps:
 1. clone dependent repositories
@@ -87,7 +87,7 @@ run-directory is the directory where all runs of all case studies are stored. ou
 
 
 
-# Usage Example (prediction of time for the input video x264_0)
+## Usage Example (prediction of time for the input video x264_0)
 
 For a better demonstration of the usage, we show it exemplarily for the subject system x264_0 and the non-functional property time.
 
