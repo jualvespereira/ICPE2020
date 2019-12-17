@@ -77,4 +77,7 @@ Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file 
 - Install the dependencies for R: <code>InstallPackages.R</code> 
 - <code>./ErrorRateTableCreator.py \<input-directory\> \<sampling-approaches\> \<labels\> \<output-tex\> </code>
   
-run-directory is the directory where all runs of all case studies are stored.
+<code>run-directory</code> is the directory where all runs of all case studies are stored.
+output-directory and input-directory are the directory where the aggregated results should be written to and read from, respectively.
+sampling-approaches and labels contain the list of sampling approaches to consider and the labels that should be used in the table.
+output-tex contains the directory where the tex-files should be written to.
