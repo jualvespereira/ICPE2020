@@ -76,5 +76,5 @@ Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file 
 - <code>./analyzeRuns.py \<run-directory\> \<output-directory\></code>
 - Install the dependencies for R: <code>InstallPackages.R</code> 
 - <code>./ErrorRateTableCreator.py \<input-directory\> \<sampling-approaches\> \<labels\> \<output-tex\> </code>
-
-<code>run-directory<\code> is the directory where all runs of all case studies are stored.
+  
+run-directory is the directory where all runs of all case studies are stored.
