@@ -4,4 +4,4 @@ In this repository, we provides general instructions of how to reproduce the res
 
 # Overview
 
-<img src="https://github.com/jualvespereira/ICPE2020/blob/master/overview.pdf" alt="Overview" style="max-width:100%;">
+![Overview](https://github.com/jualvespereira/ICPE2020/blob/master/overview.pdf)
