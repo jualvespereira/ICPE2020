@@ -42,7 +42,7 @@ The implementation depends on the [SPLConqueror](github.com/se-passau/SPLConquer
 ### 2. Performance Prediction
 
 To reproduce our results, we rely on the docker container from the [Distance-Based Sampling repository](https://github.com/se-passau/Distance-Based_Data).
-For more information on this conteiner, we refer to their [documentation](https://github.com/se-passau/Distance-Based_Data/blob/master/README.md).
+For more information on this conteiner, we refer to their documentation.
 To set up the docker container, users must follow the following steps:
 
 - Install [Docker](https://docs.docker.com/install/) (use the command <code>status docker</code> to make sure it is running).
@@ -70,14 +70,17 @@ The experiments will run for 100 random seeds.
 ### 3. Aggregation and Visualization of Results
 
 <code>analyzeRuns.py</code> and <code>ErrorRateTableCreator.py</code> are the main scripts to aggregate and visualize the results.
-<code>analyzeRuns.py</code> collects all error rates from all 100 runs of all case studies in an unique file <code>all_error_\<sampling-approach\>_\<sampling-size\>.txt</code> (see [diretory](Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/).
+<code>analyzeRuns.py</code> collects all error rates from all 100 runs of all case studies in an unique file <code>all_error_\<sampling-approach\>_\<sampling-size\>.txt</code> (see [diretory](Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/)).
 Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file and invokes the <code>R</code> script <code>PerformKruskalWallis.R</code> to perform the significance tests and automatically create tex-files that are compiled using LaTeX to generate the Tables 2-8 shown in the paper.
 
 - <code>./analyzeRuns.py \<run-directory\> \<output-directory\></code>
 - Install the dependencies for R: <code>InstallPackages.R</code> 
-- <code>./ErrorRateTableCreator.py \<input-directory\> \<sampling-approaches\> \<labels\> \<output-tex\></code>
+- <code>./ErrorRateTableCreator.py \<input-directory\> \<sampling-approaches\> \<labels\> \<output-tex\> </code>
 
-<code>run-directory<\code> is the directory where all runs of all case studies are stored. <code>output-directory<\code> and <code>input-directory<\code> are the directory where the aggregated results should be written to and read from, respectively. <code>sampling-approaches<\code> and <code>labels<\code> contain the list of sampling approaches to consider and the labels that should be used in the table. <code>output-tex<\code> contains the directory where the tex-files should be written to.
+<code>run-directory<\code> is the directory where all runs of all case studies are stored.
+<code>output-directory<\code> and <code>input-directory<\code> are the directory where the aggregated results should be written to and read from, respectively.
+<code>sampling-approaches<\code> and <code>labels<\code> contain the list of sampling approaches to consider and the labels that should be used in the table.
+<code>output-tex<\code> contains the directory where the tex-files should be written to.
 
 
 #### Files
