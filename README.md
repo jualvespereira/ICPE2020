@@ -81,3 +81,25 @@ Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file 
 <code>output-directory</code> and <code>input-directory</code> are the directory where the aggregated results should be written to and read from, respectively.
 <code>sampling-approaches</code> and <code>labels</code> contain the list of sampling approaches to consider and the labels that should be used in the table.
 <code>output-tex</code> contains the directory where the tex-files should be written to.
+
+#### Files
+
+
+
+
+
+## Usage Example (prediction of time for the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>)
+
+For a better demonstration of the usage, we show it exemplarily for the distance-based samplling approach, the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/> and the non-functional property *time*.
+The location of the measured performance values is [here](Distance-Based_Data_Time/SupplementaryWebsite/MeasuredPerformanceValues/).
+
+1. <code>sudo docker run -it -v "$(pwd)":/docker christiankaltenecker/distance-based bash</code>
+2. Go to the diretory <code>ICPE2020/Distance-Based_Data_Time</code>
+    - <code>cd ..</code>
+    - <code>cd docker/ICPE2020/Distance-Based_Data_time/</code>
+3. <code>./SPLConquerorExecuter.py x264_0 divDistBased /docker/ICPE2020/DistanceBased\_Data\_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments</code>
+4. <code>./analyzeRuns.py /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments/ /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/</code>
+5. <code>InstallPackages.R</code> 
+6. <code>./ErrorRateTableCreator.py /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/ "twise,solverBased,henard,distBased,divDistBased,random" "Coverage-based,Solver-based,Randomized solver-based,Distance-based,Diversified distance-based,Random" /docker/ICPE2020/Distance-Based_Data_Time/latex</code>
+
+In the replication process, the error rates of the replication (in the local directory <code>/docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/</code>) must be the same as the provided in this [diretory](Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/x264_0/) for the distance-based samplling approach and same sample sizes. 
