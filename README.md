@@ -4,4 +4,4 @@ In this repository, we provides general instructions of how to reproduce the res
 
 # Overview
 
-![Overview](https://github.com/jualvespereira/ICPE2020/blob/master/overview.pdf)
+![Overview](https://github.com/jualvespereira/ICPE2020/blob/master/overview.png)
