@@ -64,7 +64,11 @@ The experiments will run for 100 random seeds.
   
 #### Files
 
-
+- <code>learn_\<sampling-approach\>_\<sampling-size\>.a</code>: file containing a list of all input commands used to run SPL Conqueror
+- <code>learnAll.a</code>: file containing a super-script to multiple <code>.a-files</code>.
+- <code>out_\<sampling-approach\>_\<sampling-size\>.log</code>: file containing the error rate of applying a sampling strategy with a certain sample size on an input video (the error rate is the last number in the last line before *"Analyze finished"*).
+- <code>sampledConfigurations_\<sampling-approach\>_\<sampling-size\>.csv</code>: file containing the set of configurations used as sample. This sample set is used as input for the machine-learning technique.
+- <code>out_\<sampling-approach\>_\<sampling-size\>.log_error</code>: file containing the error(s) during the execution (if any).
 
 
 ### 3. Aggregation and Visualization of Results
