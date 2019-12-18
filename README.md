@@ -75,7 +75,7 @@ The experiments will run for 100 random seeds.
 
 <code>analyzeRuns.py</code> and <code>ErrorRateTableCreator.py</code> are the main scripts to aggregate and visualize the results.
 <code>analyzeRuns.py</code> collects all error rates from all 100 runs of all case studies in an unique file <code>all_error_\<sampling-approach\>_\<sampling-size\>.txt</code> (see [diretory](Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/)).
-Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file and invokes the <code>R</code> script <code>PerformKruskalWallis.R</code> to perform the significance tests and automatically create tex-files that are compiled using LaTeX to generate the Tables 2-8 shown in the paper.
+Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file and invokes the <code>R</code> script <code>PerformKruskalWallis.R</code> to perform the significance tests (*e.g.*, Kruskal Wallis, Mann Whitney U) on the collected error rates and automatically create tex-files that are compiled using LaTeX to generate the Tables 2-8 shown in the paper.
 
 - <code>./analyzeRuns.py \<run-directory\> \<output-directory\></code>
 - Install the dependencies for R: <code>InstallPackages.R</code> 
@@ -88,9 +88,8 @@ Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file 
 
 #### Files
 
-
-
-
+- <code>all_error_\<sampling-approach\>_\<sampling-size\>.txt</code>: file containing the agregated error rates from all 100 runs of all case studies
+- <code>\<significance-tests\>Table.tex</code>: multiple different stand alone tex files that contains the summarized tables from the paper. These files can be compiled using LaTeX.
 
 ## Usage Example (prediction of time for the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>)
 
