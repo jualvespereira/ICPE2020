@@ -1,0 +1,21 @@
+Current machine learning settings: epsilon:0 lossFunction:RELATIVE parallelization:True bagging:False baggingNumbers:3 considerEpsilonTube:False baggingTestDataFraction:50 useBackward:False abortError:10 limitFeatureSize:False featureSizeTreshold:7 quadraticFunctionSupport:True crossValidation:False crossValidation-k:5 learn-logFunction:True learn-accumulatedLogFunction:False learn-asymFunction:False learn-ratioFunction:False learn-mirrowedFunction:False numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.25 withHierarchy:False bruteForceCandidates:False ignoreBadFeatures:False stopOnLongRound:False candidateSizePenalty:True learnTimeLimit:00:00:00 scoreMeasure:RELERROR outputRoundsToStdout:False blacklisted: 
+command: twise t:2
+command: printconfigs ./twise_2.txt
+command: start
+Learning: NumberOfConfigurationsLearning:65 NumberOfConfigurationsValidation:65
+Learning progress:
+1;465.378641975308 * no_asm + -71.4795510662179 * no_mixed_refs;19.5742117057833;19.5742117057833;19.5742117057833;19.5742117057833;0.007417;2;-71.4795510662179 * no_mixed_refs;1;1.79769313486232E+308;
+2;502.175793126459 * no_asm + -88.2055288621959 * no_mixed_refs + -220.782906906907 * ref_1;10.9412127079059;10.9412127079059;10.9412127079059;10.9412127079059;0.019262;3;-220.782906906907 * ref_1;1;8.63299899787736;
+3;470.398074074073 * no_asm + -73.7611111111108 * no_mixed_refs + -190.44962962963 * ref_1 + 160.333037037036 * ref_9;7.22558252591275;7.22558252591275;7.22558252591275;7.22558252591275;0.039734;4;160.333037037036 * ref_9;1;3.71563018199319;
+Elapsed=00:00:00.0402271
+average model: 
+command: analyze-learning
+Round, Model, LearningError, LearningErrorRel, ValidationError, ValidationErrorRel, ElapsedSeconds, ModelComplexity, BestCandidate, BestCandidateSize, BestCandidateScore, TestError
+Models:
+Termination reason: abortError
+1;465.378641975308 * no_asm + -71.4795510662179 * no_mixed_refs;19.5742117057833;19.5742117057833;19.5742117057833;19.5742117057833;0.007417;2;-71.4795510662179 * no_mixed_refs;1;1.79769313486232E+308;32.6204518429566
+2;502.175793126459 * no_asm + -88.2055288621959 * no_mixed_refs + -220.782906906907 * ref_1;10.9412127079059;10.9412127079059;10.9412127079059;10.9412127079059;0.019262;3;-220.782906906907 * ref_1;1;8.63299899787736;18.0143772326771
+3;470.398074074073 * no_asm + -73.7611111111108 * no_mixed_refs + -190.44962962963 * ref_1 + 160.333037037036 * ref_9;7.22558252591275;7.22558252591275;7.22558252591275;7.22558252591275;0.039734;4;160.333037037036 * ref_9;1;3.71563018199319;11.9368823661595
+Analyze finished
+command: clean-sampling
+command: log ./out_twise_t3.log

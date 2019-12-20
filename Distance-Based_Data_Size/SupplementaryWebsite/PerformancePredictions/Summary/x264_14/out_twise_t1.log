@@ -1,0 +1,19 @@
+Current machine learning settings: epsilon:0 lossFunction:RELATIVE parallelization:True bagging:False baggingNumbers:3 considerEpsilonTube:False baggingTestDataFraction:50 useBackward:False abortError:10 limitFeatureSize:False featureSizeTreshold:7 quadraticFunctionSupport:True crossValidation:False crossValidation-k:5 learn-logFunction:True learn-accumulatedLogFunction:False learn-asymFunction:False learn-ratioFunction:False learn-mirrowedFunction:False numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.25 withHierarchy:False bruteForceCandidates:False ignoreBadFeatures:False stopOnLongRound:False candidateSizePenalty:True learnTimeLimit:00:00:00 scoreMeasure:RELERROR outputRoundsToStdout:False blacklisted: 
+command: twise t:1
+command: printconfigs ./twise_1.txt
+command: start
+Learning: NumberOfConfigurationsLearning:12 NumberOfConfigurationsValidation:12
+Learning progress:
+1;455.533636363636 * no_asm + -71.3369696969695 * no_mixed_refs;11.7022644508816;11.7022644508816;11.7022644508816;11.7022644508816;0.043502;2;-71.3369696969695 * no_mixed_refs;1;1.79769313486232E+308;
+2;474.021333333333 * no_asm + -89.8246666666665 * no_mixed_refs + -203.364666666667 * ref_1;7.60676786984062;7.60676786984062;7.60676786984062;7.60676786984062;0.04931;3;-203.364666666667 * ref_1;1;4.09549658104095;
+Elapsed=00:00:00.0509220
+average model: 
+command: analyze-learning
+Round, Model, LearningError, LearningErrorRel, ValidationError, ValidationErrorRel, ElapsedSeconds, ModelComplexity, BestCandidate, BestCandidateSize, BestCandidateScore, TestError
+Models:
+Termination reason: abortError
+1;455.533636363636 * no_asm + -71.3369696969695 * no_mixed_refs;11.7022644508816;11.7022644508816;11.7022644508816;11.7022644508816;0.043502;2;-71.3369696969695 * no_mixed_refs;1;1.79769313486232E+308;32.2630273967355
+2;474.021333333333 * no_asm + -89.8246666666665 * no_mixed_refs + -203.364666666667 * ref_1;7.60676786984062;7.60676786984062;7.60676786984062;7.60676786984062;0.04931;3;-203.364666666667 * ref_1;1;4.09549658104095;20.9293538687923
+Analyze finished
+command: clean-sampling
+command: log ./out_twise_t2.log
