@@ -1,0 +1,20 @@
+Current machine learning settings: epsilon:0 lossFunction:RELATIVE parallelization:True bagging:False baggingNumbers:3 considerEpsilonTube:False baggingTestDataFraction:50 useBackward:False abortError:10 limitFeatureSize:False featureSizeTreshold:7 quadraticFunctionSupport:True crossValidation:False crossValidation-k:5 learn-logFunction:True learn-accumulatedLogFunction:False learn-asymFunction:False learn-ratioFunction:False learn-mirrowedFunction:False numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.25 withHierarchy:False bruteForceCandidates:False ignoreBadFeatures:False stopOnLongRound:False candidateSizePenalty:True learnTimeLimit:00:00:00 scoreMeasure:RELERROR outputRoundsToStdout:False blacklisted: 
+command: twise t:3
+command: printconfigs ./twise_3.txt
+command: start
+Learning: NumberOfConfigurationsLearning:212 NumberOfConfigurationsValidation:212
+Learning progress:
+1;474.532109704642 * no_asm + -70.9874183466167 * no_mixed_refs;24.8707524391949;24.8707524391949;24.8707524391949;24.8707524391949;0.030974;2;-70.9874183466167 * no_mixed_refs;1;1.79769313486232E+308;
+2;528.594131253363 * no_asm + -85.5040722809952 * no_mixed_refs + -237.272205686052 * ref_1;12.9753468741821;12.9753468741821;12.9753468741821;12.9753468741821;0.081859;3;-237.272205686052 * ref_1;1;11.8954055650128;
+3;480.270118694363 * no_asm + -72.5281800197826 * no_mixed_refs + -191.543371579294 * ref_1 + 166.359887679965 * ref_9;8.91989651794346;8.91989651794346;8.91989651794346;8.91989651794346;0.157212;4;166.359887679965 * ref_9;1;4.05545035623864;
+Elapsed=00:00:00.1601055
+average model: 
+command: analyze-learning
+Round, Model, LearningError, LearningErrorRel, ValidationError, ValidationErrorRel, ElapsedSeconds, ModelComplexity, BestCandidate, BestCandidateSize, BestCandidateScore, TestError
+Models:
+Termination reason: abortError
+1;474.532109704642 * no_asm + -70.9874183466167 * no_mixed_refs;24.8707524391949;24.8707524391949;24.8707524391949;24.8707524391949;0.030974;2;-70.9874183466167 * no_mixed_refs;1;1.79769313486232E+308;32.9618582658037
+2;528.594131253363 * no_asm + -85.5040722809952 * no_mixed_refs + -237.272205686052 * ref_1;12.9753468741821;12.9753468741821;12.9753468741821;12.9753468741821;0.081859;3;-237.272205686052 * ref_1;1;11.8954055650128;16.3425934931546
+3;480.270118694363 * no_asm + -72.5281800197826 * no_mixed_refs + -191.543371579294 * ref_1 + 166.359887679965 * ref_9;8.91989651794346;8.91989651794346;8.91989651794346;8.91989651794346;0.157212;4;166.359887679965 * ref_9;1;4.05545035623864;10.9204935164057
+Analyze finished
+command: clean-sampling
