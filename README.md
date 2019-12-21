@@ -29,7 +29,7 @@ This directory contains a set of prediction log files with the experiment result
 
 ## Step-by-Step Instructions
 
-Our experiments consists of 3 main steps:
+Our experiments consists of 2 main steps:
 1. performance prediction
 2. aggregation and visualization of results
 
@@ -92,7 +92,7 @@ Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file 
 
 ## Usage Example (prediction of time for the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>)
 
-For a better demonstration of the usage, we show it exemplarily for the distance-based samplling approach, the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/> and the non-functional property *time*.
+For a better demonstration of the usage, we show it exemplarily for the diversified distance-based samplling approach, the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/> and the non-functional property *time*.
 The location of the measured performance values is [here](Distance-Based_Data_Time/SupplementaryWebsite/MeasuredPerformanceValues/).
 
 1. <code>sudo docker run -it -v "$(pwd)":/docker christiankaltenecker/distance-based bash</code>
