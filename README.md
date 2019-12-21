@@ -30,18 +30,10 @@ This directory contains a set of prediction log files with the experiment result
 ## Step-by-Step Instructions
 
 Our experiments consists of 3 main steps:
-1. clone dependent repositories
-2. performance prediction
-3. aggregation and visualization of results
+1. performance prediction
+2. aggregation and visualization of results
 
-### 1. Dependencies
-
-The implementation depends on the [SPLConqueror](github.com/se-passau/SPLConqueror) for sampling and learning, and on the [z3 Constraint solver](https://github.com/Z3Prover/z3.git) library to navigate through the configuration space of the subject system. These libraries need to be downloaded with the command lines:
-
-- <code>git clone https://github.com/se-passau/SPLConqueror.git</code>
-- <code>git clone https://github.com/Z3Prover/z3.git</code>
-
-### 2. Performance Prediction
+### 1. Performance Prediction
 
 To reproduce our results, we rely on the docker container from the [Distance-Based Sampling repository](https://github.com/se-passau/Distance-Based_Data).
 For more information on this conteiner, we refer to their documentation.
@@ -52,13 +44,18 @@ To set up the docker container, users must follow the following steps:
 - Download the container: 
 <code> docker pull christiankaltenecker/distance-based:latest</code> (by invoking this script, all required ressources are installed, which might take several minutes).
 
-- Run the container:
-<code>sudo docker run -it -v "$(pwd)":/docker christiankaltenecker/distance-based bash</code>
-
 To clone the main repository containing the data used in our experiments, use the following command:
 - <code> git clone https://github.com/jualvespereira/ICPE2020.git</code>
 
+- Run the container:
+<code>sudo docker run -it -v "$(pwd)":/docker christiankaltenecker/distance-based bash</code>
+
+The implementation depends on the [SPLConqueror](github.com/se-passau/SPLConqueror) for sampling and learning, and on the [z3 Constraint solver](https://github.com/Z3Prover/z3.git) library to navigate through the configuration space of the subject system. 
+- Move the folders SPLConqueror and z3 to the ICPE2020 directory: <code>mv -Rf SPLConqueror ../docker/ICPE2020/</code> and <code>mv -Rf z3 ../docker/ICPE2020/</code>
+
 To perform the sampling and learning process, inside the Docker container, go either to the directory [Distance-Based_Data_Time](Distance-Based_Data_Time/) or [Distance-Based_Data_Size](Distance-Based_Data_Size/).
+- <code>cd ..</code> and <code>cd docker/ICPE2020/Distance-Based_Data_Time</code>
+
 Then, for each <code>sampling-approach</code> (twise, solvBased, henard, distBased, divDistBased, and rand) and <code>case-study</code> (<img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_1" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_2" border="0"/>, ..., <img src="http://latex.codecogs.com/gif.latex?x264_{16}" border="0"/>), run the following Python script:
 - <code>./SPLConquerorExecuter.py \<case-study\> \<sampling-approach\> \<save-location\></code>
 
