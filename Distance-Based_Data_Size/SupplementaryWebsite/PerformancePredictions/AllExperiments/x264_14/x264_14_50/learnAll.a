@@ -1,0 +1,6 @@
+script ./learn_twise_t1.a
+clean-global
+script ./learn_twise_t2.a
+clean-global
+script ./learn_twise_t3.a
+clean-global

@@ -1,0 +1,31 @@
+Current machine learning settings: epsilon:0 lossFunction:RELATIVE parallelization:True bagging:False baggingNumbers:3 considerEpsilonTube:False baggingTestDataFraction:50 useBackward:False abortError:1 limitFeatureSize:False featureSizeTreshold:4 quadraticFunctionSupport:True crossValidation:False crossValidation-k:5 learn-logFunction:False learn-accumulatedLogFunction:False learn-asymFunction:False learn-ratioFunction:False learn-mirrowedFunction:False numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.1 withHierarchy:False bruteForceCandidates:False ignoreBadFeatures:False stopOnLongRound:True candidateSizePenalty:True learnTimeLimit:00:00:00 scoreMeasure:RELERROR outputRoundsToStdout:False blacklisted: 
+command: mlsettings bagging:False stopOnLongRound:False parallelization:True lossFunction:RELATIVE useBackward:False abortError:10 limitFeatureSize:False featureSizeTreshold:7 quadraticFunctionSupport:True crossValidation:False learn_logFunction:True numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.25 withHierarchy:False
+Current machine learning settings: epsilon:0 lossFunction:RELATIVE parallelization:True bagging:False baggingNumbers:3 considerEpsilonTube:False baggingTestDataFraction:50 useBackward:False abortError:10 limitFeatureSize:False featureSizeTreshold:7 quadraticFunctionSupport:True crossValidation:False crossValidation-k:5 learn-logFunction:True learn-accumulatedLogFunction:False learn-asymFunction:False learn-ratioFunction:False learn-mirrowedFunction:False numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.25 withHierarchy:False bruteForceCandidates:False ignoreBadFeatures:False stopOnLongRound:False candidateSizePenalty:True learnTimeLimit:00:00:00 scoreMeasure:RELERROR outputRoundsToStdout:False blacklisted: 
+command: solver z3
+command: vm /docker/docker/application/Distance-Based_Data/SupplementaryWebsite/MeasuredPerformanceValues/x264_4/FeatureModel.xml
+Warning: Variability model contains outdated notation. Children nodes will no longer have effect on the model. Instead use the parent node to describe the parent of an configuration option. You can also use the converter providedby the Variability Model GUI in export>convert legacy model.
+Warning: Default value nodes in models are no longer used and should be removed. You can also use the converter provided by the Variability Model GUI in export>convert legacy model to update your model.
+command: all /docker/docker/application/Distance-Based_Data/SupplementaryWebsite/MeasuredPerformanceValues/x264_4/measurements.xml
+Configs with too large deviation: 0
+1152 configurations loaded.
+command: nfp Performance
+command: binary satoutput henard:false numConfigs:65 seed:73
+command: learn-splconqueror
+Learning: NumberOfConfigurationsLearning:65 NumberOfConfigurationsValidation:65
+Learning progress:
+1;3801781.9375 * no_asm + 291061.547348484 * no_mixed_refs;15.7564758461677;15.7564758461677;15.7564758461677;15.7564758461677;0.016835;2;291061.547348484 * no_mixed_refs;1;1.79769313486232E+308;
+2;3298082.75295164 * no_asm + 156037.290418276 * no_mixed_refs + 1239874.91581133 * no_mbtree;6.49858243707146;6.49858243707146;6.49858243707146;6.49858243707146;0.055426;3;1239874.91581133 * no_mbtree;1;9.25789340909623;
+Elapsed=00:00:00.0578703
+average model: 
+command: analyze-learning
+Round, Model, LearningError, LearningErrorRel, ValidationError, ValidationErrorRel, ElapsedSeconds, ModelComplexity, BestCandidate, BestCandidateSize, BestCandidateScore, TestError
+Models:
+Termination reason: abortError
+1;3801781.9375 * no_asm + 291061.547348484 * no_mixed_refs;15.7564758461677;15.7564758461677;15.7564758461677;15.7564758461677;0.016835;2;291061.547348484 * no_mixed_refs;1;1.79769313486232E+308;15.7683489726124
+2;3298082.75295164 * no_asm + 156037.290418276 * no_mixed_refs + 1239874.91581133 * no_mbtree;6.49858243707146;6.49858243707146;6.49858243707146;6.49858243707146;0.055426;3;1239874.91581133 * no_mbtree;1;9.25789340909623;6.97388584119711
+Analyze finished
+command: printconfigs ./sampledConfigurations_solverBased_t2.csv
+command: clean-sampling
+command: clean-global
+command: script ./learn_solverBased_t3.a
+command: log ./out_solverBased_t3.log
