@@ -2,31 +2,31 @@ Current machine learning settings: epsilon:0 lossFunction:RELATIVE parallelizati
 command: mlsettings bagging:False stopOnLongRound:False parallelization:True lossFunction:RELATIVE useBackward:False abortError:10 limitFeatureSize:False featureSizeTreshold:7 quadraticFunctionSupport:True crossValidation:False learn_logFunction:True numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.25 withHierarchy:False
 Current machine learning settings: epsilon:0 lossFunction:RELATIVE parallelization:True bagging:False baggingNumbers:3 considerEpsilonTube:False baggingTestDataFraction:50 useBackward:False abortError:10 limitFeatureSize:False featureSizeTreshold:7 quadraticFunctionSupport:True crossValidation:False crossValidation-k:5 learn-logFunction:True learn-accumulatedLogFunction:False learn-asymFunction:False learn-ratioFunction:False learn-mirrowedFunction:False numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.25 withHierarchy:False bruteForceCandidates:False ignoreBadFeatures:False stopOnLongRound:False candidateSizePenalty:True learnTimeLimit:00:00:00 scoreMeasure:RELERROR outputRoundsToStdout:False blacklisted: 
 command: solver z3
-command: vm /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/MeasuredPerformanceValues/x264_0/FeatureModel.xml
+command: vm /docker/docker/application/Distance-Based_Data/SupplementaryWebsite/MeasuredPerformanceValues/x264/FeatureModel.xml
 Warning: Variability model contains outdated notation. Children nodes will no longer have effect on the model. Instead use the parent node to describe the parent of an configuration option. You can also use the converter providedby the Variability Model GUI in export>convert legacy model.
 Warning: Default value nodes in models are no longer used and should be removed. You can also use the converter provided by the Variability Model GUI in export>convert legacy model to update your model.
-command: all /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/MeasuredPerformanceValues/x264_0/measurements.xml
+command: all /docker/docker/application/Distance-Based_Data/SupplementaryWebsite/MeasuredPerformanceValues/x264/measurements.xml
 Configs with too large deviation: 0
 1152 configurations loaded.
 command: nfp Performance
-command: binary random numConfigs:212 seed:17 fromFile:/docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/Summary/x264_0/allConfigurations.csv
+command: binary random numConfigs:212 seed:17 fromFile:/docker/docker/application/Distance-Based_Data/SupplementaryWebsite/PerformancePredictions/Summary/x264/allConfigurations.csv
 command: learn-splconqueror
 Learning: NumberOfConfigurationsLearning:212 NumberOfConfigurationsValidation:212
 Learning progress:
-1;3.84440695652174 * no_asm + -0.923242008068131 * no_mixed_refs;22.8403385444021;22.8403385444021;22.8403385444021;22.8403385444021;0.037686;2;-0.923242008068131 * no_mixed_refs;1;1.79769313486232E+308;
-2;4.34793250979997 * no_asm + -0.982871785458737 * no_mixed_refs + -1.48475483658962 * ref_1;14.9677034987737;14.9677034987737;14.9677034987737;14.9677034987737;0.110593;3;-1.48475483658962 * ref_1;1;7.8726350456284;
-3;3.91363921003317 * no_asm + -0.950944400317164 * no_mixed_refs + -1.06407762754497 * ref_1 + 0.958209094869697 * ref_9;11.628225384617;11.628225384617;11.628225384617;11.628225384617;0.219609;4;0.958209094869697 * ref_9;1;3.33947811415672;
-4;4.11231095785441 * no_asm + -1.35325468965517 * no_mixed_refs + -1.63207506041851 * ref_1 + 0.938341920087576 * ref_9 + 1.26831534394341 * ref_1 * no_mixed_refs;7.67641574931258;7.67641574931258;7.67641574931258;7.67641574931258;0.362199;6;1.26831534394341 * ref_1 * no_mixed_refs;2;1.97590481765219;
-Elapsed=00:00:00.3705830
+1;3.84440695652174 * no_asm + -0.923242008068131 * no_mixed_refs;22.8403385444021;22.8403385444021;22.8403385444021;22.8403385444021;0.049244;2;-0.923242008068131 * no_mixed_refs;1;1.79769313486232E+308;
+2;4.34793250979997 * no_asm + -0.982871785458737 * no_mixed_refs + -1.48475483658962 * ref_1;14.9677034987737;14.9677034987737;14.9677034987737;14.9677034987737;0.144677;3;-1.48475483658962 * ref_1;1;7.8726350456284;
+3;3.91363921003317 * no_asm + -0.950944400317164 * no_mixed_refs + -1.06407762754497 * ref_1 + 0.958209094869697 * ref_9;11.628225384617;11.628225384617;11.628225384617;11.628225384617;0.279849;4;0.958209094869697 * ref_9;1;3.33947811415672;
+4;4.11231095785441 * no_asm + -1.35325468965517 * no_mixed_refs + -1.63207506041851 * ref_1 + 0.938341920087576 * ref_9 + 1.26831534394341 * ref_1 * no_mixed_refs;7.67641574931258;7.67641574931258;7.67641574931258;7.67641574931258;0.482773;6;1.26831534394341 * ref_1 * no_mixed_refs;2;1.97590481765219;
+Elapsed=00:00:00.4914297
 average model: 
 command: analyze-learning
 Round, Model, LearningError, LearningErrorRel, ValidationError, ValidationErrorRel, ElapsedSeconds, ModelComplexity, BestCandidate, BestCandidateSize, BestCandidateScore, TestError
 Models:
 Termination reason: abortError
-1;3.84440695652174 * no_asm + -0.923242008068131 * no_mixed_refs;22.8403385444021;22.8403385444021;22.8403385444021;22.8403385444021;0.037686;2;-0.923242008068131 * no_mixed_refs;1;1.79769313486232E+308;22.7154409148063
-2;4.34793250979997 * no_asm + -0.982871785458737 * no_mixed_refs + -1.48475483658962 * ref_1;14.9677034987737;14.9677034987737;14.9677034987737;14.9677034987737;0.110593;3;-1.48475483658962 * ref_1;1;7.8726350456284;15.3578405142176
-3;3.91363921003317 * no_asm + -0.950944400317164 * no_mixed_refs + -1.06407762754497 * ref_1 + 0.958209094869697 * ref_9;11.628225384617;11.628225384617;11.628225384617;11.628225384617;0.219609;4;0.958209094869697 * ref_9;1;3.33947811415672;12.7218027280948
-4;4.11231095785441 * no_asm + -1.35325468965517 * no_mixed_refs + -1.63207506041851 * ref_1 + 0.938341920087576 * ref_9 + 1.26831534394341 * ref_1 * no_mixed_refs;7.67641574931258;7.67641574931258;7.67641574931258;7.67641574931258;0.362199;6;1.26831534394341 * ref_1 * no_mixed_refs;2;1.97590481765219;8.15624731416009
+1;3.84440695652174 * no_asm + -0.923242008068131 * no_mixed_refs;22.8403385444021;22.8403385444021;22.8403385444021;22.8403385444021;0.049244;2;-0.923242008068131 * no_mixed_refs;1;1.79769313486232E+308;22.7154409148063
+2;4.34793250979997 * no_asm + -0.982871785458737 * no_mixed_refs + -1.48475483658962 * ref_1;14.9677034987737;14.9677034987737;14.9677034987737;14.9677034987737;0.144677;3;-1.48475483658962 * ref_1;1;7.8726350456284;15.3578405142176
+3;3.91363921003317 * no_asm + -0.950944400317164 * no_mixed_refs + -1.06407762754497 * ref_1 + 0.958209094869697 * ref_9;11.628225384617;11.628225384617;11.628225384617;11.628225384617;0.279849;4;0.958209094869697 * ref_9;1;3.33947811415672;12.7218027280948
+4;4.11231095785441 * no_asm + -1.35325468965517 * no_mixed_refs + -1.63207506041851 * ref_1 + 0.938341920087576 * ref_9 + 1.26831534394341 * ref_1 * no_mixed_refs;7.67641574931258;7.67641574931258;7.67641574931258;7.67641574931258;0.482773;6;1.26831534394341 * ref_1 * no_mixed_refs;2;1.97590481765219;8.15624731416009
 Analyze finished
 command: printconfigs ./sampledConfigurations_random_t3.csv
 command: clean-sampling

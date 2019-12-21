@@ -1,0 +1,11 @@
+log ./out_random_t1.log
+mlsettings bagging:False stopOnLongRound:False parallelization:True lossFunction:RELATIVE useBackward:False abortError:10 limitFeatureSize:False featureSizeTreshold:7 quadraticFunctionSupport:True crossValidation:False learn_logFunction:True numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.25 withHierarchy:False
+solver z3
+vm /docker/docker/application/Distance-Based_Data/SupplementaryWebsite/MeasuredPerformanceValues/x264_6/FeatureModel.xml
+all /docker/docker/application/Distance-Based_Data/SupplementaryWebsite/MeasuredPerformanceValues/x264_6/measurements.xml
+nfp Performance
+binary random numConfigs:12 seed:22 fromFile:/docker/docker/application/Distance-Based_Data/SupplementaryWebsite/PerformancePredictions/Summary/x264_6/allConfigurations.csv
+learn-splconqueror
+analyze-learning
+printconfigs ./sampledConfigurations_random_t1.csv
+clean-sampling

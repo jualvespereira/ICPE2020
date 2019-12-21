@@ -1,0 +1,11 @@
+log ./out_henard_t3.log
+mlsettings bagging:False stopOnLongRound:False parallelization:True lossFunction:RELATIVE useBackward:False abortError:10 limitFeatureSize:False featureSizeTreshold:7 quadraticFunctionSupport:True crossValidation:False learn_logFunction:True numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.25 withHierarchy:False
+solver z3
+vm /docker/docker/application/Distance-Based_Data/SupplementaryWebsite/MeasuredPerformanceValues/x264/FeatureModel.xml
+all /docker/docker/application/Distance-Based_Data/SupplementaryWebsite/MeasuredPerformanceValues/x264/measurements.xml
+nfp Performance
+binary satoutput henard:true numConfigs:212 seed:50 
+learn-splconqueror
+analyze-learning
+printconfigs ./sampledConfigurations_henard_t3.csv
+clean-sampling

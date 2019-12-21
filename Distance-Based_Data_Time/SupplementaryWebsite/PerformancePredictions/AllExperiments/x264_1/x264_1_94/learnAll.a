@@ -1,0 +1,6 @@
+script ./learn_distBased_t1.a
+clean-global
+script ./learn_distBased_t2.a
+clean-global
+script ./learn_distBased_t3.a
+clean-global

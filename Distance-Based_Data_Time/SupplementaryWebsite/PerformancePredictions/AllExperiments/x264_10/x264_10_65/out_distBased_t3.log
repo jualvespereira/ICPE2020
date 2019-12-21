@@ -1,0 +1,31 @@
+Current machine learning settings: epsilon:0 lossFunction:RELATIVE parallelization:True bagging:False baggingNumbers:3 considerEpsilonTube:False baggingTestDataFraction:50 useBackward:False abortError:1 limitFeatureSize:False featureSizeTreshold:4 quadraticFunctionSupport:True crossValidation:False crossValidation-k:5 learn-logFunction:False learn-accumulatedLogFunction:False learn-asymFunction:False learn-ratioFunction:False learn-mirrowedFunction:False numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.1 withHierarchy:False bruteForceCandidates:False ignoreBadFeatures:False stopOnLongRound:True candidateSizePenalty:True learnTimeLimit:00:00:00 scoreMeasure:RELERROR outputRoundsToStdout:False blacklisted: 
+command: mlsettings bagging:False stopOnLongRound:False parallelization:True lossFunction:RELATIVE useBackward:False abortError:10 limitFeatureSize:False featureSizeTreshold:7 quadraticFunctionSupport:True crossValidation:False learn_logFunction:True numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.25 withHierarchy:False
+Current machine learning settings: epsilon:0 lossFunction:RELATIVE parallelization:True bagging:False baggingNumbers:3 considerEpsilonTube:False baggingTestDataFraction:50 useBackward:False abortError:10 limitFeatureSize:False featureSizeTreshold:7 quadraticFunctionSupport:True crossValidation:False crossValidation-k:5 learn-logFunction:True learn-accumulatedLogFunction:False learn-asymFunction:False learn-ratioFunction:False learn-mirrowedFunction:False numberOfRounds:70 backwardErrorDelta:1 minImprovementPerRound:0.25 withHierarchy:False bruteForceCandidates:False ignoreBadFeatures:False stopOnLongRound:False candidateSizePenalty:True learnTimeLimit:00:00:00 scoreMeasure:RELERROR outputRoundsToStdout:False blacklisted: 
+command: solver z3
+command: vm /docker/docker/application/Distance-Based_Data/SupplementaryWebsite/MeasuredPerformanceValues/x264_10/FeatureModel.xml
+Warning: Variability model contains outdated notation. Children nodes will no longer have effect on the model. Instead use the parent node to describe the parent of an configuration option. You can also use the converter providedby the Variability Model GUI in export>convert legacy model.
+Warning: Default value nodes in models are no longer used and should be removed. You can also use the converter provided by the Variability Model GUI in export>convert legacy model to update your model.
+command: all /docker/docker/application/Distance-Based_Data/SupplementaryWebsite/MeasuredPerformanceValues/x264_10/measurements.xml
+Configs with too large deviation: 0
+1152 configurations loaded.
+command: nfp Performance
+command: hybrid distribution-aware distance-metric:manhattan distribution:uniform onlyBinary:true selection:SolverSelection number-weight-optimization:1 numConfigs:212 seed:65
+command: learn-splconqueror
+Learning: NumberOfConfigurationsLearning:212 NumberOfConfigurationsValidation:212
+Learning progress:
+1;1.74302301790282 * no_asm + -0.325766289124346 * no_mixed_refs;21.8923717560917;21.8923717560917;21.8923717560917;21.8923717560917;0.017237;2;-0.325766289124346 * no_mixed_refs;1;1.79769313486232E+308;
+2;1.98986067141683 * no_asm + -0.343301204401296 * no_mixed_refs + -0.687908214711197 * ref_1;12.3209938960498;12.3209938960498;12.3209938960498;12.3209938960498;0.060126;3;-0.687908214711197 * ref_1;1;9.57137786004186;
+3;1.72625543928086 * no_asm + -0.338619974943476 * no_mixed_refs + -0.425176812074016 * ref_1 + 0.51404060539728 * ref_9;6.65539153740326;6.65539153740326;6.65539153740326;6.65539153740326;0.115494;4;0.51404060539728 * ref_9;1;5.66560235864654;
+Elapsed=00:00:00.1178838
+average model: 
+command: analyze-learning
+Round, Model, LearningError, LearningErrorRel, ValidationError, ValidationErrorRel, ElapsedSeconds, ModelComplexity, BestCandidate, BestCandidateSize, BestCandidateScore, TestError
+Models:
+Termination reason: abortError
+1;1.74302301790282 * no_asm + -0.325766289124346 * no_mixed_refs;21.8923717560917;21.8923717560917;21.8923717560917;21.8923717560917;0.017237;2;-0.325766289124346 * no_mixed_refs;1;1.79769313486232E+308;19.8323445244505
+2;1.98986067141683 * no_asm + -0.343301204401296 * no_mixed_refs + -0.687908214711197 * ref_1;12.3209938960498;12.3209938960498;12.3209938960498;12.3209938960498;0.060126;3;-0.687908214711197 * ref_1;1;9.57137786004186;13.779130759484
+3;1.72625543928086 * no_asm + -0.338619974943476 * no_mixed_refs + -0.425176812074016 * ref_1 + 0.51404060539728 * ref_9;6.65539153740326;6.65539153740326;6.65539153740326;6.65539153740326;0.115494;4;0.51404060539728 * ref_9;1;5.66560235864654;9.58640505946903
+Analyze finished
+command: printconfigs ./sampledConfigurations_distBased_t3.csv
+command: clean-sampling
+command: clean-global
