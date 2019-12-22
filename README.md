@@ -55,10 +55,11 @@ To clone the main repository containing the data used in our experiments, use th
 <code>sudo docker run -it -v "$(pwd)":/docker christiankaltenecker/distance-based bash</code>
 
 The implementation depends on the [SPLConqueror](github.com/se-passau/SPLConqueror) for sampling and learning, and on the [z3 Constraint solver](https://github.com/Z3Prover/z3.git) library to navigate through the configuration space of the subject system. 
-- Move the folders SPLConqueror and z3 to the ICPE2020 directory: <code>mv -Rf SPLConqueror ../docker/ICPE2020/</code> and <code>mv -Rf z3 ../docker/ICPE2020/</code>
+- Move the folders SPLConqueror and z3 to the ICPE2020 directory: <code>mv SPLConqueror ../docker/ICPE2020/</code> and <code>mv z3 ../docker/ICPE2020/</code>
 
 To perform the sampling and learning processes, inside the Docker container, go either to the directory [Distance-Based_Data_Time](Distance-Based_Data_Time/) or [Distance-Based_Data_Size](Distance-Based_Data_Size/).
 - <code>cd ..</code> and <code>cd docker/ICPE2020/Distance-Based_Data_Time</code>
+- Change access permissions: <code>chmod u+x *</code>
 
 Then, for each <code>\<sampling-approach\></code> (twise, solvBased, henard, distBased, divDistBased, and rand) and <code>\<case-study\></code> (<img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_1" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_2" border="0"/>, ..., <img src="http://latex.codecogs.com/gif.latex?x264_{16}" border="0"/>), run the following Python script:
 - <code>./SPLConquerorExecuter.py \<case-study\> \<sampling-approach\> \<save-location\></code>
