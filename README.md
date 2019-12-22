@@ -97,7 +97,7 @@ Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file 
 
 ## Usage Example (prediction of time for the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>)
 
-For a better demonstration of the usage, we show it exemplarily for the diversified distance-based samplling approach, the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/> and the non-functional property *time*.
+For a better demonstration of the usage, we show it exemplarily for the diversified distance-based samplling approach, the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/> and the non-functional property *time* (for 10 random seeds - see final parameters of the command line in step 6).
 The location of the measured performance values is [here](Distance-Based_Data_Time/SupplementaryWebsite/MeasuredPerformanceValues/).
 
 1. <code>git clone https://github.com/jualvespereira/ICPE2020.git</code>
