@@ -49,7 +49,7 @@ To set up the docker container, users must follow the following steps:
 <code> docker pull christiankaltenecker/distance-based:latest</code> (by invoking this script, all required ressources are installed, which might take several minutes).
 
 To clone the main repository containing the data used in our experiments, use the following command:
-- <code> git clone https://github.com/jualvespereira/ICPE2020.git</code>
+- <code>git clone https://github.com/jualvespereira/ICPE2020.git</code>
 
 - Run the container:
 <code>sudo docker run -it -v "$(pwd)":/docker christiankaltenecker/distance-based bash</code>
@@ -85,10 +85,10 @@ Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file 
 - Install the dependencies for R: <code>R.sh</code>, <code>install.packages("effsize")</code>, <code>install.packages("FSA")</code>
 - <code>./ErrorRateTableCreator.py \<input-directory\> \<sampling-approaches\> \<labels\> \<output-tex\> </code>
   
-<code>run-directory</code> is the directory where all runs of all case studies are stored.
-<code>output-directory</code> and <code>input-directory</code> are the directory where the aggregated results should be written to and read from, respectively.
-<code>sampling-approaches</code> and <code>labels</code> contain the list of sampling approaches to consider and the labels that should be used in the table.
-<code>output-tex</code> contains the directory where the tex-files should be written to.
+<code>\<run-directory\></code> is the directory where all runs of all case studies are stored.
+<code>\<output-directory\></code> and <code>\<input-directory\></code> are the directory where the aggregated results should be written to and read from, respectively.
+<code>\<sampling-approaches\></code> and <code>\<labels\></code> contain the list of sampling approaches to consider and the labels that should be used in the table.
+<code>\<output-tex\></code> contains the directory where the tex-files should be written to.
 
 #### Files
 
@@ -100,15 +100,19 @@ Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file 
 For a better demonstration of the usage, we show it exemplarily for the diversified distance-based samplling approach, the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/> and the non-functional property *time*.
 The location of the measured performance values is [here](Distance-Based_Data_Time/SupplementaryWebsite/MeasuredPerformanceValues/).
 
-1. <code>sudo docker run -it -v "$(pwd)":/docker christiankaltenecker/distance-based bash</code>
-2. Go to the diretory <code>ICPE2020/Distance-Based_Data_Time</code>
+1. <code>docker pull christiankaltenecker/distance-based:latest</code> 
+2. <code>git clone https://github.com/jualvespereira/ICPE2020.git</code>
+3. <code>sudo docker run -it -v "$(pwd)":/docker christiankaltenecker/distance-based bash</code>
+4. <code>mv SPLConqueror ../docker/ICPE2020/</code> and <code>mv z3 ../docker/ICPE2020/</code>
+5. Go to the diretory <code>ICPE2020/Distance-Based_Data_Time</code> and change access permissions
     - <code>cd ..</code>
     - <code>cd docker/ICPE2020/Distance-Based_Data_time/</code>
-3. <code>./SPLConquerorExecuter.py x264_0 divDistBased /docker/ICPE2020/DistanceBased\_Data\_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments</code>
-4. <code>./analyzeRuns.py /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments/ /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/</code>
-5. <code>R.sh</code> 
-6. <code>install.packages("effsize")</code>
-7. <code>install.packages("FSA")</code>
-8. <code>./ErrorRateTableCreator.py /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/ "twise,solverBased,henard,distBased,divDistBased,random" "Coverage-based,Solver-based,Randomized solver-based,Distance-based,Diversified distance-based,Random" /docker/ICPE2020/Distance-Based_Data_Time/latex</code>
+    - <code>chmod u+x *</code>
+6. <code>./SPLConquerorExecuter.py x264_0 divDistBased /docker/ICPE2020/DistanceBased\_Data\_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments 1 10</code>
+7. <code>./analyzeRuns.py /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments/ /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/</code>
+8. <code>R.sh</code> 
+9. <code>install.packages("effsize")</code>
+10. <code>install.packages("FSA")</code>
+11. <code>./ErrorRateTableCreator.py /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/ "twise,solverBased,henard,distBased,divDistBased,random" "Coverage-based,Solver-based,Randomized solver-based,Distance-based,Diversified distance-based,Random" /docker/ICPE2020/Distance-Based_Data_Time/latex</code>
 
 In the replication process, the error rates of the replication (in the local directory <code>/docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/</code>) must be the same as the provided in this [diretory](Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/x264_0/) for the distance-based samplling approach and same sample sizes. 
