@@ -114,6 +114,7 @@ The location of the measured performance values is [here](Distance-Based_Data_Ti
     - <code>./R.sh</code> 
     - <code>install.packages("effsize")</code>
     - <code>install.packages("FSA")</code>
+    - <code>q()</code> and <code>y</code>
 9. <code>./ErrorRateTableCreator.py /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/ "twise,solverBased,henard,distBased,divDistBased,random" "Coverage-based,Solver-based,Randomized solver-based,Distance-based,Diversified distance-based,Random" /docker/ICPE2020/Distance-Based_Data_Time/latex</code>
 
 In the replication process, the error rates of the replication (in the local directory <code>/docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/</code>) must be the same as the provided in this [diretory](Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/x264_0/) for the distance-based samplling approach and same sample sizes. 
