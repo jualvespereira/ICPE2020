@@ -9,9 +9,13 @@ DOI: [10.5281/zenodo.3588647](https://doi.org/10.5281/zenodo.3588647)
 ![Overview](https://github.com/jualvespereira/ICPE2020/blob/master/overview.png)
 
 In the Figure above, we give an overview of our study.
-We replicate a [recent study](https://github.com/se-passau/Distance-Based_Data) through an in-depth analysis of x264, a popular and configurable video encoder.
-We systematically measure 1,152 configurations of x264 with 17 different input videos and two quantitative properties (encoding time and encoding size).
-Our goal is to understand whether there is a dominant sampling strategy (*e.g.*, random, coverage-based, distance-based) over the very same subject system (x264), *i.e.*, whatever the workload and targeted performance properties. 
+We replicate a [recent study](https://github.com/se-passau/Distance-Based_Data) through an in-depth analysis of *x264*, a popular and configurable video encoder.
+We systematically measure 1,152 configurations of *x264* with 17 different input videos and two quantitative properties (encoding time and encoding size).
+Our goal is to understand whether there is a dominant sampling strategy (*e.g.*, random, coverage-based, distance-based) over the very same subject system (*x264*), *i.e.*, whatever the workload and targeted performance properties. 
+
+## Publication
+
+Juliana Alves Pereira, Mathieu Acher, Hugo Martin, Jean-Marc Jézéquel. [Sampling Effect on Performance Prediction of Configurable Systems: A Case Study](https://hal.inria.fr/hal-02356290/document). International Conference on Performance Engineering (ICPE), ACM, April 2020. To appear.
 
 ## Data
 
