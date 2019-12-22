@@ -60,7 +60,7 @@ The implementation depends on the [SPLConqueror](github.com/se-passau/SPLConquer
 To perform the sampling and learning processes, inside the Docker container, go either to the directory [Distance-Based_Data_Time](Distance-Based_Data_Time/) or [Distance-Based_Data_Size](Distance-Based_Data_Size/).
 - <code>cd ..</code> and <code>cd docker/ICPE2020/Distance-Based_Data_Time</code>
 
-Then, for each <code>/<sampling-approach/></code> (twise, solvBased, henard, distBased, divDistBased, and rand) and <code>/<case-study/></code> (<img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_1" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_2" border="0"/>, ..., <img src="http://latex.codecogs.com/gif.latex?x264_{16}" border="0"/>), run the following Python script:
+Then, for each <code>\<sampling-approach\></code> (twise, solvBased, henard, distBased, divDistBased, and rand) and <code>\<case-study\></code> (<img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_1" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_2" border="0"/>, ..., <img src="http://latex.codecogs.com/gif.latex?x264_{16}" border="0"/>), run the following Python script:
 - <code>./SPLConquerorExecuter.py \<case-study\> \<sampling-approach\> \<save-location\></code>
 
 The experiments will run for 100 random seeds.
