@@ -82,7 +82,7 @@ The experiments will run for 100 random seeds.
 Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file and invokes the <code>R</code> script <code>PerformKruskalWallis.R</code> to perform the significance tests (*e.g.*, Kruskal Wallis, Mann Whitney U) on the collected error rates and automatically create tex-files that are compiled using LaTeX to generate the Tables 2-8 shown in the paper.
 
 - <code>./analyzeRuns.py \<run-directory\> \<output-directory\></code>
-- Install the dependencies for R: <code>R.sh</code>, <code>install.packages("effsize")</code>, <code>install.packages("FSA")</code>
+- Install the dependencies for R: <code>./R.sh</code>, <code>install.packages("effsize")</code>, <code>install.packages("FSA")</code>
 - <code>./ErrorRateTableCreator.py \<input-directory\> \<sampling-approaches\> \<labels\> \<output-tex\> </code>
   
 <code>\<run-directory\></code> is the directory where all runs of all case studies are stored.
@@ -111,7 +111,7 @@ The location of the measured performance values is [here](Distance-Based_Data_Ti
 6. <code>./SPLConquerorExecuter.py x264_0 divDistBased /docker/ICPE2020/DistanceBased\_Data\_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments 1 10</code>
 7. <code>./analyzeRuns.py /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments/ /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/</code>
 8. Install the dependencies for R:
-    - <code>R.sh</code> 
+    - <code>./R.sh</code> 
     - <code>install.packages("effsize")</code>
     - <code>install.packages("FSA")</code>
 9. <code>./ErrorRateTableCreator.py /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/ "twise,solverBased,henard,distBased,divDistBased,random" "Coverage-based,Solver-based,Randomized solver-based,Distance-based,Diversified distance-based,Random" /docker/ICPE2020/Distance-Based_Data_Time/latex</code>
