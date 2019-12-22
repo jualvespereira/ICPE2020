@@ -25,7 +25,7 @@ They provide two main directories: [MeasuredPerformanceValues](Distance-Based_Da
 
 ### Measured Performance Values
 
-This directory contains the feature model and measurements of all 17 analysed input videos, namely <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_1" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_2" border="0"/>, ..., <img src="http://latex.codecogs.com/gif.latex?x264_{16}" border="0"/>, and a file containing the description of the input video we used to measure all valid configurations. To perform additional experiments related to a new case study, the user can add the corresponding files at this directory (more information about the format of these files can be found at [SPLConqueror](github.com/se-passau/SPLConqueror)).
+This directory contains the feature model and measurements of all 17 analysed input videos, namely <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_1" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_2" border="0"/>, ..., <img src="http://latex.codecogs.com/gif.latex?x264_{16}" border="0"/>, and a file containing the description of the input video we used to measure all valid configurations. To perform additional experiments related to a new case study, the user can add the corresponding files at this directory (more information about the format of these files can be found at [SPLConqueror](https://github.com/se-passau/SPLConqueror)).
 
 ### Performance Predictions
 
