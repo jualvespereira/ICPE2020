@@ -96,7 +96,7 @@ The location of the measured performance values is [here](Distance-Based_Data_Ti
 2. <code>cd ICPE2020/Distance-Based_Data_Time</code>
 3. <code>./SPLConquerorExecuter.py x264_0 divDistBased /docker/ICPE2020/DistanceBased\_Data\_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments 1 10</code>
 4. <code>./analyzeRuns.py /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments/ /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/</code>
-5. Create a folder to store all the generated latex files <code>mkdir latex_files</code>
+5. Create a folder to store the generated latex files <code>mkdir latex_files</code>
 6. <code>./ErrorRateTableCreator.py /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/ "twise,solverBased,henard,distBased,divDistBased,random" "Coverage-based,Solver-based,Randomized solver-based,Distance-based,Diversified distance-based,Random" /docker/ICPE2020/Distance-Based_Data_Time/latex_files</code>
 
 In the replication process, the generated error rates (in the local directory <code>/ICPE2020/DistanceBased_Data_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments/x264_0</code>) must be the same as the provided in this [diretory](Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments/x264_0) for the diversified distance-based sampling approach, same sample sizes and random seeds (1-10). 
