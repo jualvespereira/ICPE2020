@@ -25,7 +25,7 @@ They provide two main directories: [MeasuredPerformanceValues](Distance-Based_Da
 
 ### Measured Performance Values
 
-This directory contains the feature model and measurements of all 17 analysed input videos, namely <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_1" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_2" border="0"/>, ..., <img src="http://latex.codecogs.com/gif.latex?x264_{16}" border="0"/>, and a file containing the description of the input video we used to measure all valid configurations. To perform additional experiments related to a new case study, the user can add the corresponding files at this directory (more information about the format of these files can be found at [SPLConqueror](https://github.com/se-passau/SPLConqueror)).
+This directory contains the feature model and measurements of all 17 analysed input videos, namely <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_1" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_2" border="0"/>, ..., <img src="http://latex.codecogs.com/gif.latex?x264_{16}" border="0"/>, and a file containing the description of the input video we used to measure all valid configurations. To perform additional experiments related to a new case study, the user should add the files *"FeatureModel.xml"* and *"measurements.xml"* at a new folder into the directory <code>Distance-Based_Data_Time/SupplementaryWebsite/MeasuredPerformanceValues/</code> (as an example see these files for x264 case study -- more information about the format of these files can be found at [SPLConqueror](https://github.com/se-passau/SPLConqueror)).
 
 ### Performance Predictions
 
@@ -52,7 +52,7 @@ To set up the docker container, users must follow the following steps:
 <code>sudo docker run -it -v "$(pwd)":/docker hmartinirisa/icpe2020 bash</code>
 
 To perform the sampling and learning processes, inside the Docker container, go either to the directory [Distance-Based_Data_Time](Distance-Based_Data_Time/) or [Distance-Based_Data_Size](Distance-Based_Data_Size/).
-- <code>cd /docker/ICPE2020/Distance-Based_Data_Time</code>
+- <code>cd /ICPE2020/Distance-Based_Data_Time</code> or <code>cd /ICPE2020/Distance-Based_Data_Size</code>
 
 Then, for each <code>\<sampling-approach\></code> (twise, solvBased, henard, distBased, divDistBased, and rand) and <code>\<case-study\></code> (<img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_1" border="0"/>, <img src="http://latex.codecogs.com/gif.latex?x264_2" border="0"/>, ..., <img src="http://latex.codecogs.com/gif.latex?x264_{16}" border="0"/>), run the following Python script:
 - <code>./SPLConquerorExecuter.py \<case-study\> \<sampling-approach\> \<save-location\></code>
@@ -89,7 +89,7 @@ Then, the script <code>ErrorRateTableCreator.py</code> reads the generated file 
 
 ## Usage Example (prediction of time for the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/>)
 
-For a better demonstration of the usage, we show it exemplarily for the diversified distance-based samplling approach, the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/> and the non-functional property *time* (for 10 random seeds - see final parameters of the command line in step 6).
+For a better demonstration of the usage, we show it exemplarily for the diversified distance-based samplling approach, the input video <img src="http://latex.codecogs.com/gif.latex?x264_0" border="0"/> and the non-functional property *time* (for 10 random seeds - see final parameters of the command line in step 3).
 The location of the measured performance values is [here](Distance-Based_Data_Time/SupplementaryWebsite/MeasuredPerformanceValues/).
 
 1. <code>sudo docker run -it -v "$(pwd)":/docker hmartinirisa/icpe2020 bash</code>
@@ -99,4 +99,4 @@ The location of the measured performance values is [here](Distance-Based_Data_Ti
 5. Create a folder to store all the generated latex files <code>mkdir latex_files</code>
 6. <code>./ErrorRateTableCreator.py /docker/ICPE2020/Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllSummary/ "twise,solverBased,henard,distBased,divDistBased,random" "Coverage-based,Solver-based,Randomized solver-based,Distance-based,Diversified distance-based,Random" /docker/ICPE2020/Distance-Based_Data_Time/latex_files</code>
 
-In the replication process, the generated error rates (in the local directory <code>/ICPE2020/DistanceBased_Data_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments/x264_0</code>) must be the same as the provided in this [diretory](Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments/x264_0) for the diversified distance-based sampling approach, same sample sizes and random seeds. 
+In the replication process, the generated error rates (in the local directory <code>/ICPE2020/DistanceBased_Data_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments/x264_0</code>) must be the same as the provided in this [diretory](Distance-Based_Data_Time/SupplementaryWebsite/PerformancePredictions/AllExperiments/x264_0) for the diversified distance-based sampling approach, same sample sizes and random seeds (1-10). 
