@@ -2,7 +2,7 @@
 
 In this repository, we provide general instructions on how to reproduce the results of the paper "Sampling Effect on Performance Prediction of Configurable Systems: A Case Study" and reuse our datasets of measurements.
 
-DOI: [10.5281/zenodo.3588647](https://doi.org/10.5281/zenodo.3588647)
+DOI: [10.5281/zenodo.3614085](https://doi.org/10.5281/zenodo.3614085)
 
 ## Overview
 
