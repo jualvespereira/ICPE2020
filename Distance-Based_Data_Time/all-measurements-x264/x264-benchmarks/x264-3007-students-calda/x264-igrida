@@ -1,0 +1,17 @@
+#!/bin/sh
+#OAR -l nodes=1,walltime=12:00:00
+#OAR -p cluster = 'calda'
+#OAR -O /temp_dd/igrida-fs1/macher/SCRATCH/fake_job.%jobid%.output
+#OAR -E /temp_dd/igrida-fs1/macher/SCRATCH/fake_job.%jobid%.error
+set -xv
+
+echo
+echo "Starting x264 config measurements"
+echo "==================================="
+
+bash launchAll
+
+echo
+echo "DONE x264!"
+echo "---------------------"
+EOF
