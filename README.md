@@ -15,7 +15,7 @@ Our goal is to understand whether there is a dominant sampling strategy (*e.g.*,
 
 ## Publication
 
-Juliana Alves Pereira, Mathieu Acher, Hugo Martin, Jean-Marc Jézéquel. [Sampling Effect on Performance Prediction of Configurable Systems: A Case Study](https://hal.inria.fr/hal-02356290/document). International Conference on Performance Engineering (ICPE), ACM, April 2020. To appear.
+Juliana Alves Pereira, Mathieu Acher, Hugo Martin, Jean-Marc Jézéquel. [Sampling Effect on Performance Prediction of Configurable Systems: A Case Study](https://dl.acm.org/doi/abs/10.1145/3358960.3379137). International Conference on Performance Engineering (ICPE), ACM, April 2020. Pages 277–288. Best paper award.
 
 ## Data
 
